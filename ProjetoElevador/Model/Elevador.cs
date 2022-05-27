@@ -27,8 +27,6 @@ namespace ProjetoElevador.Model
                 string resposta = Console.ReadLine();
                 Console.Clear();
                 VerificaResposta(resposta);
-                //Console.ReadLine();
-                //Console.Clear();
             }
             while (continuar);
         }
@@ -79,32 +77,36 @@ namespace ProjetoElevador.Model
             }
             else if(resp == "6")
             {
-                Console.WriteLine(@"Saindo da aplicação...");
+                Console.WriteLine(@"
+                        Saindo da aplicação...");
                 continuar = false;
             }
             else
             {
-                Console.WriteLine(@"Opção inválida.");
+                Console.WriteLine(@"
+                        Opção inválida.");
             }
         }
 
         private void Inicializar()
         {
             Console.WriteLine(@"
-                         Elevador inicializado.
-                             ");
+                        Elevador inicializado.");
         }
 
         public void Entrar()
         {
             if(capacidade < capMaxima)
             {
-                Console.WriteLine("Você entrou no elevador.");
+                Console.WriteLine(@"
+                        Você entrou no elevador.");
                 capacidade++;
             }
             else
             {
-                Console.WriteLine("Elevador cheio. Não é possível entrar.");
+                Console.WriteLine(@"
+                        Elevador cheio. 
+                        Não é possível entrar.");
             }
         }
 
@@ -114,12 +116,15 @@ namespace ProjetoElevador.Model
         {
             if (andar < totalDeAndares)
             {
-                Console.WriteLine("Você subiu um andar.");
+                Console.WriteLine(@"
+                        Você subiu um andar.");
                 andar++;
             }
             else
             {
-                Console.WriteLine("Último andar atingido. Não é possível subir mais.");
+                Console.WriteLine(@"
+                        Último andar atingido. 
+                        Não é possível subir mais.");
             }
 
         }
@@ -128,12 +133,15 @@ namespace ProjetoElevador.Model
         {
             if (andar > 0)
             {
-                Console.WriteLine("Você desceu um andar.");
+                Console.WriteLine(@"
+                        Você desceu um andar.");
                 andar--;
             }
             else
             {
-                Console.WriteLine("Você está no térreo. Não é possível descer mais.");
+                Console.WriteLine(@"
+                        Você está no térreo. 
+                        Não é possível descer mais.");
             }
         }
 
@@ -141,12 +149,14 @@ namespace ProjetoElevador.Model
         {
             if (capacidade > 0)
             {
-                Console.WriteLine("Você saiu do elevador.");
+                Console.WriteLine(@"
+                        Você saiu do elevador.");
                 capacidade--;
             }
             else
             {
-                Console.WriteLine("O elevador está vazio.");
+                Console.WriteLine(@"
+                        O elevador está vazio.");
             }
         }
     }
